@@ -6,4 +6,6 @@ from trainer import models
 
 @admin.register(models.Trainer)
 class TrainerAdmin(admin.ModelAdmin):
-    ...
+    list_display = ('id', 'first_name', 'last_name', 'cpf', 'data_nascimento', 'created_date',)
+    ordering = '-id',
+    search_fields = 'first_name', 'last_name', 'cpf',
